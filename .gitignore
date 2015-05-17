@@ -1,0 +1,4 @@
+*.sdf
+Samples/CPP/Output/
+*.vcxproj.filters
+*.vcxproj.user
