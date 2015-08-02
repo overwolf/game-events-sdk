@@ -25,6 +25,7 @@ class OWGameEventsDll : public PDLL {
   DECLARE_FUNCTION1(__stdcall, OWGameEventsErrors, owgame_events_begin_info_transaction, owgame_events_handle)
   DECLARE_FUNCTION1(__stdcall, OWGameEventsErrors, owgame_events_commit_info_transaction, owgame_events_handle)
   DECLARE_FUNCTION1(__stdcall, OWGameEventsErrors, owgame_events_close, owgame_events_handle)
+  DECLARE_FUNCTION1(__stdcall, OWGameEventsErrors, owgame_events_turn_on_logger, const wchar_t*)
 };
 
 const char kCategoryPlayer[] = "player";
@@ -65,6 +66,11 @@ int main(int argc, const char* argv[]) {
     { kCategoryPlayer, MACRO_ARRAYSIZE(player_keys), player_keys },
     { kCategoryLocation, MACRO_ARRAYSIZE(location_keys), location_keys }
   };
+
+  // optional (for debugging the integration) set output log file
+  // you'd probably want to change the full-file path and add a date
+  // to the filename
+  //dll.owgame_events_turn_on_logger(L"logger.txt");
 
   // create handle
   OWGameEventsErrors err = dll.owgame_events_create(id, 2, categories, &owgameevents);
