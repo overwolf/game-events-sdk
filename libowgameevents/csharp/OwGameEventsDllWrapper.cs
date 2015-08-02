@@ -105,7 +105,10 @@ namespace OWGameEvents
         [DllImport(kDllName, CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
         public static extern OWGameEventsErrors owgame_events_close(IntPtr handle);
 
-        #endregion
+        [DllImport(kDllName, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.StdCall)]
+        public static extern OWGameEventsErrors owgame_events_turn_on_logger(string filename);
+      
+      #endregion
 
       #region Marshalling
 

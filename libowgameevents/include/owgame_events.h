@@ -106,6 +106,13 @@ OWGameEventsErrors owgame_events_commit_info_transaction(
 // handle - owgame_events_handle that was created via |owgame_events_create|
 OWGameEventsErrors owgame_events_close(owgame_events_handle handle);
 
+// writes internal logs to a file and debugout - used for debugging problems
+// with the library
+//
+// returns:
+//  ERR_INVALID_PARAMS
+OWGameEventsErrors owgame_events_turn_on_logger(const wchar_t* output_file);
+
 }; // extern "C"
 }; // namespace owgame_events
 
