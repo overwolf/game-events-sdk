@@ -8,3 +8,12 @@ Overwolf Game Events SDK
 - libowgameevents\bin - contains utilities that help the development process:
   - consumer.exe - a consumer application that shows real-time triggered events and info key changes
 - libowgameevents\samples - contains CPP and CSharp sample applications and code
+
+
+# 1.0.0.5
+
+- Added internal memory pools for better performance
+
+# 1.0.0.4
+
+- Added owgame_events_turn_on_logger for debugging
