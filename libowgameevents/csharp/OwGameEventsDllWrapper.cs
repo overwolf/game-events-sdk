@@ -82,6 +82,7 @@ namespace OWGameEvents
           ERR_INVALID_PARAMS,           // passed invalid parameters (value_length > what you passed in create?)
           ERR_DISPATCHER,               // failed to dispatch request (might happen when closing handle)
           ERR_THROTTLING,               // we limit amount of events: 10 event per 200 ms
+          ERR_OUT_OF_MEM,               // couldn't allocate memory
         }
       #endregion Enums
 

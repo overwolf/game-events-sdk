@@ -72,7 +72,6 @@ OWGameEventsErrors owgame_events_trigger_event(
   owgame_events_handle handle,
   owgame_event* event);
 
-
 // For efficiency reasons, if you wish to update more than one key at once,
 // you can begin a transaction -> set info keys -> commit the transaction.
 // Once you commit, the Overwolf apps will be notified of all changes at once.
