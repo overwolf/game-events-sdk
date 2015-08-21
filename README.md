@@ -9,6 +9,9 @@ Overwolf Game Events SDK
   - consumer.exe - a consumer application that shows real-time triggered events and info key changes
 - libowgameevents\samples - contains CPP and CSharp sample applications and code
 
+# 1.0.0.6
+
+- Memory allocation bug fix
 
 # 1.0.0.5
 
