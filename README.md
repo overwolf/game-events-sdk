@@ -10,18 +10,18 @@ Overwolf Game Events SDK
 
 # API basics
 
-1. owgame_events_create - creates an owgame_events_handle object with pre-defined info categories structure
-2. owgame_events_set_info_key - update a specific key in the info database
-3. owgame_events_trigger_event - trigger a non-persistent events
-4. owgame_events_begin_info_transaction - begin an info database transaction (allows updating multiple keys without triggering an update for individual owgame_events_set_info_key calls)
-5. owgame_events_commit_info_transaction - commit the info database transaction
-6. owgame_events_close - close the owgame_events_handle object
-7. owgame_events_turn_on_logger - set a local logging file (good for debugging)
+1. **owgame_events_create** - creates an owgame_events_handle object with pre-defined info categories structure
+2. **owgame_events_set_info_key** - update a specific key in the info database
+3. **owgame_events_trigger_event** - trigger a non-persistent events
+4. **owgame_events_begin_info_transaction** - begin an info database transaction (allows updating multiple keys without triggering an update for individual owgame_events_set_info_key calls)
+5. **owgame_events_commit_info_transaction** - commit the info database transaction
+6. **owgame_events_close** - close the owgame_events_handle object
+7. **owgame_events_turn_on_logger** - set a local logging file (good for debugging)
 
 # General guidelines
 
-1. Use owgame_events_set_info_key for persistent game information (across the match/session) - for example: player health or player name
-2. Use owgame_events_trigger_event for "volatile" game events (which are only relevant for when they happen)
+1. Use **owgame_events_set_info_key** for persistent game information (across the match/session) - for example: player health or player name
+2. Use **owgame_events_trigger_event** for "volatile" game events (which are only relevant for when they happen)
 3. When defining the info_categories structure (see owgame_events_create): it is better to use discrete key-values (as opposed to json values).  This is good for performance (i.e. not having to constantly serialize JSON text blocks) and easier to consume by the Overwolf apps (i.e. not having to parse a JSON and figure out what changed).
 
 For example - if you have a "player_info" category - it is better to declare the following:
