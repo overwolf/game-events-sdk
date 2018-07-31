@@ -18,7 +18,7 @@ Overwolf Game Events SDK
 6. owgame_events_close - close the owgame_events_handle object
 7. owgame_events_turn_on_logger - set a local logging file (good for debugging)
 
-# General guideline
+# General guidelines
 
 1. Use owgame_events_set_info_key for persistent game information (across the match/session) - for example: player health or player name
 2. Use owgame_events_trigger_event for "volatile" game events (which are only relevant for when they happen)
