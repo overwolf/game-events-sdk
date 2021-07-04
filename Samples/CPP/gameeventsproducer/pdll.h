@@ -52,8 +52,8 @@ public: \
 #define DECLARE_FUNCTION1(convention, retVal, FuncName, Param1) \
 public: \
   typedef retVal (convention* TYPE_##FuncName)(Param1); \
-  TYPE_##FuncName m_##FuncName; \
-  short m_is##FuncName;\
+  TYPE_##FuncName m_##FuncName = NULL; \
+  short m_is##FuncName = 0;\
   retVal FuncName(Param1 p1) \
      { \
      if (dll_handle_) \
@@ -78,8 +78,8 @@ public: \
 #define DECLARE_FUNCTION2(convention, retVal, FuncName, Param1, Param2) \
 public: \
   typedef retVal (convention* TYPE_##FuncName)(Param1, Param2); \
-  TYPE_##FuncName m_##FuncName; \
-  short m_is##FuncName;\
+  TYPE_##FuncName m_##FuncName = NULL; \
+  short m_is##FuncName = 0;\
   retVal FuncName(Param1 p1, Param2 p2) \
      { \
      if (dll_handle_) \
@@ -102,8 +102,8 @@ public: \
 #define DECLARE_FUNCTION3(convention, retVal, FuncName, Param1, Param2, Param3) \
 public: \
   typedef retVal (convention* TYPE_##FuncName)(Param1, Param2, Param3); \
-  TYPE_##FuncName m_##FuncName; \
-  short m_is##FuncName;\
+  TYPE_##FuncName m_##FuncName = NULL; \
+  short m_is##FuncName = 0;\
   retVal FuncName(Param1 p1, Param2 p2, Param3 p3) \
      { \
      if (dll_handle_) \
@@ -126,8 +126,8 @@ public: \
 #define DECLARE_FUNCTION4(convention, retVal, FuncName, Param1, Param2, Param3, Param4) \
 public: \
   typedef retVal (convention* TYPE_##FuncName)(Param1, Param2, Param3, Param4); \
-  TYPE_##FuncName m_##FuncName; \
-  short m_is##FuncName;\
+  TYPE_##FuncName m_##FuncName = NULL; \
+  short m_is##FuncName = 0;\
   retVal FuncName(Param1 p1, Param2 p2, Param3 p3, Param4 p4) \
      { \
      if (dll_handle_) \
@@ -150,8 +150,8 @@ public: \
 #define DECLARE_FUNCTION5(convention, retVal, FuncName, Param1, Param2, Param3, Param4, Param5) \
 public: \
   typedef retVal (convention* TYPE_##FuncName)(Param1, Param2, Param3, Param4, Param5); \
-  TYPE_##FuncName m_##FuncName; \
-  short m_is##FuncName;\
+  TYPE_##FuncName m_##FuncName = NULL; \
+  short m_is##FuncName = 0;\
   retVal FuncName(Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5) \
      { \
      if (dll_handle_) \
@@ -174,8 +174,8 @@ public: \
 #define DECLARE_FUNCTION6(convention, retVal, FuncName, Param1, Param2, Param3, Param4, Param5, Param6) \
 public: \
   typedef retVal (convention* TYPE_##FuncName)(Param1, Param2, Param3, Param4, Param5, Param6); \
-  TYPE_##FuncName m_##FuncName; \
-  short m_is##FuncName;\
+  TYPE_##FuncName m_##FuncName = NULL; \
+  short m_is##FuncName = 0;\
   retVal FuncName(Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6) \
      { \
      if (dll_handle_) \
